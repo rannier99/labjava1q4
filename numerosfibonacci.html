@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Números fibonacci</h1>
+    <div>
+
+    </div>
+    <script>
+
+        const container = document.querySelector('div');
+
+
+        function numerosFibonacci() {
+            var resultado = [0, 1];
+            for (let index = 0; resultado.length < 101; index++) {
+                var numero = parseFloat(resultado[resultado.length -1]) + parseFloat(resultado[resultado.length - 2])
+                resultado.push(numero)
+                console.log(resultado[resultado.length])
+            }
+            console.log(resultado.length)
+            return resultado
+        }
+
+
+
+        container.innerHTML = "<p>" + numerosFibonacci() + "</p>"
+    </script>
+</body>
+
+</html>
